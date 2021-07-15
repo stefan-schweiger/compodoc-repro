@@ -2,8 +2,216 @@
     "pipes": [],
     "interfaces": [],
     "injectables": [],
+    "guards": [],
+    "interceptors": [],
     "classes": [],
-    "directives": [],
+    "directives": [
+        {
+            "name": "TestDirective",
+            "id": "directive-TestDirective-05b032b04f5dd4e7d8acab5ff13ca6c9",
+            "file": "src/app/test.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import {\r\n  ContentChild,\r\n  Directive,\r\n  ElementRef,\r\n  EventEmitter,\r\n  HostBinding,\r\n  Inject,\r\n  Input,\r\n  Output,\r\n} from '@angular/core';\r\n\r\n@Directive({ selector: 'test' })\r\nexport class TestDirective {\r\n  /** @internal */\r\n  public internalProp: string = '';\r\n\r\n  /** @ignored */\r\n  public ignoredProp: string = '';\r\n\r\n  /** @internal */\r\n  @Input()\r\n  public internalInputProp: string = '';\r\n\r\n  /** @ignored */\r\n  @Input()\r\n  public ignoredInputProp: string = '';\r\n\r\n  /** @internal */\r\n  @Output()\r\n  public internalOutputProperty = new EventEmitter<void>();\r\n\r\n  /** @ignore */\r\n  @Output()\r\n  public ignoredOutputProperty = new EventEmitter<void>();\r\n\r\n  constructor(\r\n    /** @internal */ @Inject('_1') public internalConstructorProp: string = '',\r\n    /** @ignored */ @Inject('_2') public ignoredConstructorProp: string = ''\r\n  ) {}\r\n}\r\n",
+            "selector": "test",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "internalInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 334,
+                            "end": 344,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 317,
+                            "tagName": {
+                                "pos": 335,
+                                "end": 343,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 78,
+                                "escapedText": "internal"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "line": 22,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "internalOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "",
+                    "description": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 484,
+                            "end": 494,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 317,
+                            "tagName": {
+                                "pos": 485,
+                                "end": 493,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 78,
+                                "escapedText": "internal"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "line": 30,
+                    "type": "EventEmitter"
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [
+                {
+                    "name": "ignoredConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 38,
+                    "rawdescription": "",
+                    "decorators": [
+                        {
+                            "name": "Inject",
+                            "stringifiedArguments": "'_2'"
+                        }
+                    ],
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "pos": 772,
+                            "end": 781,
+                            "flags": 4194304,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 317,
+                            "tagName": {
+                                "pos": 773,
+                                "end": 780,
+                                "flags": 4194304,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 78,
+                                "escapedText": "ignored"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "internalConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 37,
+                    "rawdescription": "",
+                    "decorators": [
+                        {
+                            "name": "Inject",
+                            "stringifiedArguments": "'_1'"
+                        }
+                    ],
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "pos": 691,
+                            "end": 701,
+                            "flags": 4194304,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 317,
+                            "tagName": {
+                                "pos": 692,
+                                "end": 700,
+                                "flags": 4194304,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 78,
+                                "escapedText": "internal"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "internalConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    },
+                    {
+                        "name": "ignoredConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    }
+                ],
+                "line": 34,
+                "jsdoctags": [
+                    {
+                        "name": "internalConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "ignoredConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
     "components": [
         {
             "name": "AppComponent",
@@ -26,6 +234,8 @@
                 {
                     "name": "title",
                     "defaultValue": "'compodoc-repro'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
@@ -33,166 +243,29 @@
                 }
             ],
             "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
             "hostBindings": [],
             "hostListeners": [],
             "description": "",
-            "rawdescription": "",
+            "rawdescription": "\n",
             "type": "component",
             "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  template: '<h1>Hello!</h1>',\n})\nexport class AppComponent {\n  title = 'compodoc-repro';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
-        },
-        {
-            "name": "BaseComponent",
-            "id": "component-BaseComponent-c5e59fe89eaf923f5451f9e8b8b2fca4",
-            "file": "src/app/base.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "styleUrls": [],
-            "styles": [],
-            "template": "",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "testPropertyInBase",
-                    "defaultValue": "false",
-                    "description": "<p>This will be included in the inheriting component </p>\n",
-                    "line": 8
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "testEventInBase",
-                    "defaultValue": "new EventEmitter<void>()",
-                    "description": "<p>This will be included in the inheriting component </p>\n",
-                    "line": 10,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\";\r\n\r\n@Component({\r\n  template: '',\r\n})\r\nexport abstract class BaseComponent {\r\n  /** This will be included in the inheriting component */\r\n  @Input() testPropertyInBase = false;\r\n  /** This will be included in the inheriting component */\r\n  @Output() testEventInBase = new EventEmitter<void>();\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": ""
-        },
-        {
-            "name": "InheritCompComponent",
-            "id": "component-InheritCompComponent-3aadaff93bf5d2424dc43268937f35e9",
-            "file": "src/app/inherit-comp.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "styleUrls": [],
-            "styles": [],
-            "template": "",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "testPropertyInComponent",
-                    "defaultValue": "false",
-                    "line": 8
-                },
-                {
-                    "name": "testPropertyInBase",
-                    "defaultValue": "false",
-                    "description": "<p>This will be included in the inheriting component </p>\n",
-                    "line": 8,
-                    "inheritance": {
-                        "file": "BaseComponent"
-                    }
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "testEventInComponent",
-                    "defaultValue": "new EventEmitter<void>()",
-                    "line": 9,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "testEventInBase",
-                    "defaultValue": "new EventEmitter<void>()",
-                    "description": "<p>This will be included in the inheriting component </p>\n",
-                    "line": 10,
-                    "type": "EventEmitter",
-                    "inheritance": {
-                        "file": "BaseComponent"
-                    }
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { BaseComponent } from './base.component';\r\n\r\n@Component({\r\n  template: '',\r\n})\r\nexport class InheritCompComponent extends BaseComponent {\r\n  @Input() testPropertyInComponent = false;\r\n  @Output() testEventInComponent = new EventEmitter<void>();\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "extends": "BaseComponent"
-        },
-        {
-            "name": "InheritDirComponent",
-            "id": "component-InheritDirComponent-16addec293963cc838bc85542561a1c7",
-            "file": "src/app/inherit-dir.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "styleUrls": [],
-            "styles": [],
-            "template": "",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "testPropertyInComponent",
-                    "defaultValue": "false",
-                    "line": 8
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "testEventInComponent",
-                    "defaultValue": "new EventEmitter<void>()",
-                    "line": 9,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { BaseDirective } from './base.directive';\r\n\r\n@Component({\r\n  template: '',\r\n})\r\nexport class InheritDirComponent extends BaseDirective {\r\n  @Input() testPropertyInComponent = false;\r\n  @Output() testEventInComponent = new EventEmitter<void>();\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "extends": "BaseDirective"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
+            "id": "module-AppModule-04bb3ccd48b2f167b537c372aeb00be3",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { TestDirective } from './test.directive';\n\n@NgModule({\n  declarations: [\n    TestDirective\n  ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -202,13 +275,7 @@
                     "type": "declarations",
                     "elements": [
                         {
-                            "name": "AppComponent"
-                        },
-                        {
-                            "name": "InheritCompComponent"
-                        },
-                        {
-                            "name": "InheritDirComponent"
+                            "name": "TestDirective"
                         }
                     ]
                 },
@@ -238,10 +305,22 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: true\n}"
             },
@@ -250,20 +329,54 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true\n}"
                 }
@@ -274,6 +387,8 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
                 }
@@ -285,7 +400,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 17,
+        "count": 0,
         "status": "low",
         "files": [
             {
@@ -298,30 +413,12 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/base.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "BaseComponent",
-                "coveragePercent": 66,
-                "coverageCount": "2/3",
-                "status": "good"
-            },
-            {
-                "filePath": "src/app/inherit-comp.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "InheritCompComponent",
-                "coveragePercent": 40,
-                "coverageCount": "2/5",
-                "status": "medium"
-            },
-            {
-                "filePath": "src/app/inherit-dir.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "InheritDirComponent",
+                "filePath": "src/app/test.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "TestDirective",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -340,6 +437,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
