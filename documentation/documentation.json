@@ -7,74 +7,31 @@
     "classes": [],
     "directives": [
         {
-            "name": "TestDirective",
-            "id": "directive-TestDirective-05b032b04f5dd4e7d8acab5ff13ca6c9",
-            "file": "src/app/test.directive.ts",
+            "name": "BaseADirective",
+            "id": "directive-BaseADirective-c14cc0990fb49f48c7e199f073748432",
+            "file": "src/app/base-a.directive.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import {\r\n  ContentChild,\r\n  Directive,\r\n  ElementRef,\r\n  EventEmitter,\r\n  HostBinding,\r\n  Inject,\r\n  Input,\r\n  Output,\r\n} from '@angular/core';\r\n\r\n@Directive({ selector: 'test' })\r\nexport class TestDirective {\r\n  /** @internal */\r\n  public internalProp: string = '';\r\n\r\n  /** @ignored */\r\n  public ignoredProp: string = '';\r\n\r\n  /** @internal */\r\n  @Input()\r\n  public internalInputProp: string = '';\r\n\r\n  /** @ignored */\r\n  @Input()\r\n  public ignoredInputProp: string = '';\r\n\r\n  /** @internal */\r\n  @Output()\r\n  public internalOutputProperty = new EventEmitter<void>();\r\n\r\n  /** @ignore */\r\n  @Output()\r\n  public ignoredOutputProperty = new EventEmitter<void>();\r\n\r\n  constructor(\r\n    /** @internal */ @Inject('_1') public internalConstructorProp: string = '',\r\n    /** @ignored */ @Inject('_2') public ignoredConstructorProp: string = ''\r\n  ) {}\r\n}\r\n",
-            "selector": "test",
+            "sourceCode": "import {\r\n  Directive,\r\n  EventEmitter,\r\n  Input,\r\n  Output,\r\n} from '@angular/core';\r\n\r\n@Directive()\r\nexport abstract class BaseADirective {\r\n  public baseAProp: string = '';\r\n\r\n  @Input()\r\n  public baseAInputProp: string = '';\r\n\r\n  @Output()\r\n  public baseAOutputProperty = new EventEmitter<void>();\r\n\r\n  constructor(\r\n    public baseAConstructorProp: string = ''\r\n  ) {}\r\n}\r\n",
             "providers": [],
             "inputsClass": [
                 {
-                    "name": "internalInputProp",
+                    "name": "baseAInputProp",
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 334,
-                            "end": 344,
-                            "flags": 4227072,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 317,
-                            "tagName": {
-                                "pos": 335,
-                                "end": 343,
-                                "flags": 4227072,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 78,
-                                "escapedText": "internal"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "line": 22,
+                    "line": 13,
                     "type": "string"
                 }
             ],
             "outputsClass": [
                 {
-                    "name": "internalOutputProperty",
+                    "name": "baseAOutputProperty",
                     "defaultValue": "new EventEmitter<void>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "",
-                    "description": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 484,
-                            "end": 494,
-                            "flags": 4227072,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 317,
-                            "tagName": {
-                                "pos": 485,
-                                "end": 493,
-                                "flags": 4227072,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 78,
-                                "escapedText": "internal"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "line": 30,
+                    "line": 16,
                     "type": "EventEmitter"
                 }
             ],
@@ -84,83 +41,29 @@
             "hostListeners": [],
             "propertiesClass": [
                 {
-                    "name": "ignoredConstructorProp",
+                    "name": "baseAConstructorProp",
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 38,
-                    "rawdescription": "",
-                    "decorators": [
-                        {
-                            "name": "Inject",
-                            "stringifiedArguments": "'_2'"
-                        }
-                    ],
+                    "line": 19,
                     "modifierKind": [
                         122
-                    ],
-                    "jsdoctags": [
-                        {
-                            "pos": 772,
-                            "end": 781,
-                            "flags": 4194304,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 317,
-                            "tagName": {
-                                "pos": 773,
-                                "end": 780,
-                                "flags": 4194304,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 78,
-                                "escapedText": "ignored"
-                            },
-                            "comment": ""
-                        }
                     ]
                 },
                 {
-                    "name": "internalConstructorProp",
+                    "name": "baseAProp",
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 37,
-                    "rawdescription": "",
-                    "decorators": [
-                        {
-                            "name": "Inject",
-                            "stringifiedArguments": "'_1'"
-                        }
-                    ],
+                    "line": 10,
                     "modifierKind": [
                         122
-                    ],
-                    "jsdoctags": [
-                        {
-                            "pos": 691,
-                            "end": 701,
-                            "flags": 4194304,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 317,
-                            "tagName": {
-                                "pos": 692,
-                                "end": 700,
-                                "flags": 4194304,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 78,
-                                "escapedText": "internal"
-                            },
-                            "comment": ""
-                        }
                     ]
                 }
             ],
@@ -172,24 +75,17 @@
                 "deprecationMessage": "",
                 "args": [
                     {
-                        "name": "internalConstructorProp",
-                        "type": "string",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "defaultValue": "''"
-                    },
-                    {
-                        "name": "ignoredConstructorProp",
+                        "name": "baseAConstructorProp",
                         "type": "string",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "defaultValue": "''"
                     }
                 ],
-                "line": 34,
+                "line": 16,
                 "jsdoctags": [
                     {
-                        "name": "internalConstructorProp",
+                        "name": "baseAConstructorProp",
                         "type": "string",
                         "deprecated": false,
                         "deprecationMessage": "",
@@ -197,9 +93,90 @@
                         "tagName": {
                             "text": "param"
                         }
-                    },
+                    }
+                ]
+            }
+        },
+        {
+            "name": "BaseBDirective",
+            "id": "directive-BaseBDirective-4d3978a79bf691f3a3b828c2772c6ce5",
+            "file": "src/app/base-b.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import {\r\n  Directive,\r\n  EventEmitter,\r\n  Input,\r\n  Output,\r\n} from '@angular/core';\r\n\r\nimport { BaseADirective } from './base-a.directive';\r\n\r\n@Directive()\r\nexport abstract class BaseBDirective extends BaseADirective {\r\n  public baseBProp: string = '';\r\n\r\n  @Input()\r\n  public baseBInputProp: string = '';\r\n\r\n  @Output()\r\n  public baseBOutputProperty = new EventEmitter<void>();\r\n\r\n  constructor(public baseBConstructorProp: string = '') {\r\n    super('test');\r\n  }\r\n}\r\n",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "baseBInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "baseBOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "EventEmitter"
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [
+                {
+                    "name": "baseBConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 20,
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "baseBProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "modifierKind": [
+                        122
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
                     {
-                        "name": "ignoredConstructorProp",
+                        "name": "baseBConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "baseBConstructorProp",
                         "type": "string",
                         "deprecated": false,
                         "deprecationMessage": "",
@@ -254,18 +231,573 @@
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
+        },
+        {
+            "name": "ImplAAComponent",
+            "id": "component-ImplAAComponent-75720dcd768eddbc7cc516b0b9d27635",
+            "file": "src/app/impl-aa.comonent.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "impl-aa",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div>Impl AA</div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "componentAAInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string"
+                },
+                {
+                    "name": "componentAInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "inheritance": {
+                        "file": "ImplAComponent"
+                    }
+                },
+                {
+                    "name": "baseAInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "inheritance": {
+                        "file": "BaseADirective"
+                    }
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "componentAAOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "componentAOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter",
+                    "inheritance": {
+                        "file": "ImplAComponent"
+                    }
+                },
+                {
+                    "name": "baseAOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter",
+                    "inheritance": {
+                        "file": "BaseADirective"
+                    }
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "componentAAConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "decorators": [
+                        {
+                            "name": "Inject",
+                            "stringifiedArguments": "'_'"
+                        }
+                    ],
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "componentAAProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "componentAConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "decorators": [
+                        {
+                            "name": "Inject",
+                            "stringifiedArguments": "'_'"
+                        }
+                    ],
+                    "modifierKind": [
+                        122
+                    ],
+                    "inheritance": {
+                        "file": "ImplAComponent"
+                    }
+                },
+                {
+                    "name": "componentAProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        122
+                    ],
+                    "inheritance": {
+                        "file": "ImplAComponent"
+                    }
+                },
+                {
+                    "name": "baseAConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 19,
+                    "modifierKind": [
+                        122
+                    ],
+                    "inheritance": {
+                        "file": "BaseADirective"
+                    }
+                },
+                {
+                    "name": "baseAProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        122
+                    ],
+                    "inheritance": {
+                        "file": "BaseADirective"
+                    }
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';\r\n\r\nimport { ImplAComponent } from './impl-a.component';\r\n\r\n@Component({\r\n  selector: 'impl-aa',\r\n  template: '<div>Impl AA</div>',\r\n})\r\nexport abstract class ImplAAComponent extends ImplAComponent {\r\n  public componentAAProp: string = '';\r\n\r\n  @Input()\r\n  public componentAAInputProp: string = '';\r\n\r\n  @Output()\r\n  public componentAAOutputProperty = new EventEmitter<void>();\r\n\r\n  constructor(@Inject('_') public componentAAConstructorProp: string = '') {\r\n    super('test');\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "componentAAConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    }
+                ],
+                "line": 16,
+                "jsdoctags": [
+                    {
+                        "name": "componentAAConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": "ImplAComponent"
+        },
+        {
+            "name": "ImplAComponent",
+            "id": "component-ImplAComponent-4ed785f067d3ca059fac74372afe968f",
+            "file": "src/app/impl-a.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "impl-a",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div>Impl A</div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "componentAInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string"
+                },
+                {
+                    "name": "baseAInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "inheritance": {
+                        "file": "BaseADirective"
+                    }
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "componentAOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "baseAOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter",
+                    "inheritance": {
+                        "file": "BaseADirective"
+                    }
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "componentAConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "decorators": [
+                        {
+                            "name": "Inject",
+                            "stringifiedArguments": "'_'"
+                        }
+                    ],
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "componentAProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "baseAConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 19,
+                    "modifierKind": [
+                        122
+                    ],
+                    "inheritance": {
+                        "file": "BaseADirective"
+                    }
+                },
+                {
+                    "name": "baseAProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        122
+                    ],
+                    "inheritance": {
+                        "file": "BaseADirective"
+                    }
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';\r\n\r\nimport { BaseADirective } from './base-a.directive';\r\n\r\n@Component({\r\n    selector: 'impl-a',\r\n    template: '<div>Impl A</div>'\r\n})\r\nexport abstract class ImplAComponent extends BaseADirective {\r\n  public componentAProp: string = '';\r\n\r\n  @Input()\r\n  public componentAInputProp: string = '';\r\n\r\n  @Output()\r\n  public componentAOutputProperty = new EventEmitter<void>();\r\n\r\n  constructor(@Inject('_') public componentAConstructorProp: string = '') {\r\n    super('test');\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "componentAConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    }
+                ],
+                "line": 16,
+                "jsdoctags": [
+                    {
+                        "name": "componentAConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": "BaseADirective"
+        },
+        {
+            "name": "ImplBComponent",
+            "id": "component-ImplBComponent-fca7f9a615ebb5a02353355a74d178c9",
+            "file": "src/app/impl-b.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "impl-a",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div>Impl A</div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "componentBInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string"
+                },
+                {
+                    "name": "baseBInputProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "inheritance": {
+                        "file": "BaseBDirective"
+                    }
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "componentBOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "baseBOutputProperty",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "EventEmitter",
+                    "inheritance": {
+                        "file": "BaseBDirective"
+                    }
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "componentBConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "decorators": [
+                        {
+                            "name": "Inject",
+                            "stringifiedArguments": "'_'"
+                        }
+                    ],
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "componentBProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "baseBConstructorProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 20,
+                    "modifierKind": [
+                        122
+                    ],
+                    "inheritance": {
+                        "file": "BaseBDirective"
+                    }
+                },
+                {
+                    "name": "baseBProp",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "modifierKind": [
+                        122
+                    ],
+                    "inheritance": {
+                        "file": "BaseBDirective"
+                    }
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';\r\n\r\nimport { BaseBDirective } from './base-b.directive';\r\n\r\n@Component({\r\n  selector: 'impl-a',\r\n  template: '<div>Impl A</div>',\r\n})\r\nexport abstract class ImplBComponent extends BaseBDirective {\r\n  public componentBProp: string = '';\r\n\r\n  @Input()\r\n  public componentBInputProp: string = '';\r\n\r\n  @Output()\r\n  public componentBOutputProperty = new EventEmitter<void>();\r\n\r\n  constructor(@Inject('_') public componentBConstructorProp: string = '') {\r\n    super('test');\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "componentBConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    }
+                ],
+                "line": 16,
+                "jsdoctags": [
+                    {
+                        "name": "componentBConstructorProp",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": "BaseBDirective"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-04bb3ccd48b2f167b537c372aeb00be3",
+            "id": "module-AppModule-1b0d157eb3b475df49e1ecb02f62ab25",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { TestDirective } from './test.directive';\n\n@NgModule({\n  declarations: [\n    TestDirective\n  ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n\n  ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -273,11 +805,7 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "TestDirective"
-                        }
-                    ]
+                    "elements": []
                 },
                 {
                     "type": "imports",
@@ -413,12 +941,48 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/test.directive.ts",
+                "filePath": "src/app/base-a.directive.ts",
                 "type": "directive",
                 "linktype": "directive",
-                "name": "TestDirective",
+                "name": "BaseADirective",
                 "coveragePercent": 0,
                 "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/base-b.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "BaseBDirective",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/impl-a.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ImplAComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/impl-aa.comonent.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ImplAAComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/impl-b.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ImplBComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
                 "status": "low"
             },
             {
